@@ -1,0 +1,13 @@
+---
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: myappthesecond
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: REGISTRY_URL/replace-me-namespace/myappthesecond
+          ports:
+            - containerPort: 3000
